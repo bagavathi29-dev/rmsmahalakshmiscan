@@ -17,21 +17,15 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1a2a3a;}
 .nav-right{display:flex;align-items:center;gap:8px;}
 .lang-btn{background:transparent;border:1px solid #4a7aaf;color:#cce4ff;padding:4px 10px;border-radius:20px;cursor:pointer;font-size:11px;transition:all 0.2s;}
 .lang-btn.active{background:#1565c0;border-color:#64b5f6;color:#fff;}
-
-/* HAMBURGER */
 .hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
 .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s;}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-/* MOBILE MENU */
 .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:#0a2a5e;z-index:99;border-top:1px solid rgba(255,255,255,0.1);box-shadow:0 4px 20px rgba(0,0,0,0.4);}
 .mobile-menu.open{display:block;}
 .mobile-menu a{display:block;color:#cce4ff;text-decoration:none;padding:16px 1.5rem;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.08);transition:all 0.2s;}
-.mobile-menu a:hover,.mobile-menu a.active{background:rgba(255,255,255,0.1);color:#fff;padding-left:2rem;}
-
-/* DESKTOP NAV LINKS */
+.mobile-menu a.active{background:rgba(255,255,255,0.1);color:#fff;}
 .nav-links{display:none;gap:0;list-style:none;}
 .nav-links a{color:#cce4ff;text-decoration:none;font-size:13px;padding:8px 12px;border-radius:6px;transition:all 0.2s;display:block;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.15);}
@@ -40,26 +34,27 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1a2a3a;}
 .page{display:none;}
 .page.active{display:block;}
 
-/* HERO */
-.hero{background:linear-gradient(135deg,#0a2a5e 0%,#1565c0 60%,#0d47a1 100%);min-height:calc(100vh - 60px);display:flex;flex-direction:column;justify-content:center;padding:2rem 1.2rem;position:relative;overflow:hidden;}
-.hero-badge{display:inline-block;background:rgba(255,255,255,0.13);color:#90caf9;font-size:9px;letter-spacing:1.5px;padding:5px 12px;border-radius:20px;margin-bottom:1rem;border:1px solid rgba(255,255,255,0.2);text-transform:uppercase;}
-.hero h1{font-size:32px;font-weight:900;color:#fff;line-height:1.15;margin-bottom:0.5rem;}
+/* ===================== HOME PAGE ===================== */
+.hero{background:linear-gradient(160deg,#071e4a 0%,#0d3880 50%,#1565c0 100%);padding:2.5rem 1.2rem 0;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:#fff;clip-path:ellipse(55% 100% at 50% 100%);}
+.hero-inner{position:relative;z-index:1;}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.12);color:#90caf9;font-size:9px;letter-spacing:1.5px;padding:5px 12px;border-radius:20px;margin-bottom:1rem;border:1px solid rgba(255,255,255,0.2);text-transform:uppercase;}
+.hero h1{font-size:30px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:0.5rem;}
 .hero h1 span{color:#64b5f6;}
-.hero-sub{font-size:12px;color:#90caf9;margin-bottom:0.5rem;}
-.hero-desc{font-size:13px;color:#bbdefb;margin-bottom:1.2rem;line-height:1.7;}
-.hero-since{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);color:#fff;padding:6px 14px;border-radius:20px;font-size:11px;margin-bottom:1.5rem;border:1px solid rgba(255,255,255,0.15);}
-.hero-btns{display:flex;flex-direction:column;gap:10px;}
-.btn-primary{background:#fff;color:#0a2a5e;padding:14px 24px;border-radius:30px;font-weight:700;font-size:15px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all 0.2s;text-decoration:none;width:100%;}
-.btn-primary:hover{background:#bbdefb;}
-.btn-outline{background:transparent;color:#fff;padding:13px 24px;border-radius:30px;font-weight:600;font-size:14px;border:2px solid rgba(255,255,255,0.5);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all 0.2s;width:100%;}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
+.hero-sub{font-size:12px;color:#90caf9;margin-bottom:0.8rem;}
+.hero-desc{font-size:13px;color:#bbdefb;margin-bottom:1.5rem;line-height:1.7;}
+.hero-btns{display:flex;flex-direction:column;gap:10px;margin-bottom:2rem;}
+.btn-call{background:#fff;color:#0a2a5e;padding:14px 24px;border-radius:30px;font-weight:700;font-size:15px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;width:100%;transition:all 0.2s;}
+.btn-call:active{background:#bbdefb;}
+.btn-ghost{background:transparent;color:#fff;padding:13px 24px;border-radius:30px;font-weight:600;font-size:14px;border:2px solid rgba(255,255,255,0.4);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;transition:all 0.2s;}
+.btn-ghost:active{background:rgba(255,255,255,0.1);}
 
-/* HERO CARDS - shown below on mobile */
-.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:2rem;}
-.hero-card{background:rgba(255,255,255,0.11);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:12px;color:#fff;text-align:center;}
-.hero-card h4{font-size:11px;font-weight:700;margin-bottom:3px;}
-.hero-card p{font-size:10px;color:#90caf9;}
-.hero-card .icon{font-size:22px;margin-bottom:5px;}
+/* HERO STATS STRIP */
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:rgba(255,255,255,0.08);border-radius:14px;margin-bottom:3rem;border:1px solid rgba(255,255,255,0.15);overflow:hidden;}
+.hero-stat{padding:14px 8px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+.hero-stat:last-child{border-right:none;}
+.hero-stat .snum{font-size:22px;font-weight:900;color:#fff;line-height:1;}
+.hero-stat .slbl{font-size:9px;color:#90caf9;margin-top:3px;letter-spacing:0.3px;}
 
 /* TICKER */
 .ticker{background:#1565c0;color:#fff;padding:8px 0;overflow:hidden;}
@@ -68,32 +63,56 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1a2a3a;}
 .ticker-inner span::before{content:'◆ ';color:#90caf9;}
 @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
+/* WHY CHOOSE RMS SECTION */
+.why-section{padding:2rem 1.2rem;background:#fff;}
+.section-label{font-size:10px;letter-spacing:2.5px;color:#1565c0;text-transform:uppercase;display:block;margin-bottom:6px;font-weight:600;}
+.section-title{font-size:22px;font-weight:800;color:#0a2a5e;margin-bottom:4px;}
+.section-sub{font-size:13px;color:#78909c;margin-bottom:1.5rem;}
+
+.why-grid{display:flex;flex-direction:column;gap:12px;}
+.why-item{display:flex;gap:14px;align-items:flex-start;background:#f8fbff;border:1px solid #e3f2fd;border-radius:14px;padding:1.2rem;transition:all 0.2s;}
+.why-item:active{background:#e3f2fd;}
+.why-item-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.why-item-body h4{font-size:14px;font-weight:700;color:#0a2a5e;margin-bottom:4px;}
+.why-item-body p{font-size:12px;color:#546e7a;line-height:1.6;}
+.why-item-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:6px;letter-spacing:0.5px;}
+
+/* QUICK SERVICES STRIP */
+.quick-services{padding:0 1.2rem 2rem;}
+.qs-title{font-size:14px;font-weight:700;color:#0a2a5e;margin-bottom:1rem;}
+.qs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.qs-item{background:#f0f7ff;border-radius:12px;padding:12px 8px;text-align:center;border:1px solid #e3f2fd;cursor:pointer;transition:all 0.2s;}
+.qs-item:active{background:#e3f2fd;}
+.qs-item .qi{font-size:22px;margin-bottom:4px;}
+.qs-item span{font-size:10px;font-weight:600;color:#0a2a5e;line-height:1.3;display:block;}
+
+/* CTA STRIP */
+.cta-strip{margin:0 1.2rem 2rem;background:linear-gradient(135deg,#0a2a5e,#1565c0);border-radius:16px;padding:1.5rem;text-align:center;}
+.cta-strip h3{color:#fff;font-size:16px;font-weight:700;margin-bottom:6px;}
+.cta-strip p{color:#90caf9;font-size:12px;margin-bottom:1.2rem;}
+.cta-strip a{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0a2a5e;padding:12px 28px;border-radius:30px;font-weight:700;font-size:15px;text-decoration:none;}
+
 /* INNER PAGES */
-.inner-page{padding:1.5rem 1.2rem;}
 .page-header{background:#0a2a5e;padding:1.5rem 1.2rem;}
 .page-header .label{font-size:10px;letter-spacing:2px;color:#90caf9;text-transform:uppercase;display:block;margin-bottom:6px;}
 .page-header h2{font-size:22px;font-weight:700;color:#fff;}
 .page-header p{font-size:13px;color:#90caf9;margin-top:4px;}
+.inner-page{padding:1.5rem 1.2rem;}
 
 /* STATS */
 .about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:1.5rem;}
 .stat-card{background:#e3f2fd;border-radius:12px;padding:16px;text-align:center;}
 .stat-card .num{font-size:24px;font-weight:800;color:#0a2a5e;}
 .stat-card .lbl{font-size:11px;color:#1565c0;margin-top:2px;}
-
-/* ABOUT TEXT */
-.about-text{margin-bottom:1.5rem;}
 .about-text h3{font-size:17px;font-weight:700;color:#0a2a5e;margin-bottom:0.8rem;}
 .about-text p{color:#546e7a;line-height:1.8;margin-bottom:0.8rem;font-size:14px;}
-
-/* WHY CARD */
-.why-card{background:#0a2a5e;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
-.why-header{font-size:11px;color:#90caf9;margin-bottom:1rem;font-weight:600;letter-spacing:1px;}
-.why-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:1rem;}
-.why-row:last-child{margin-bottom:0;}
-.why-icon{background:#1565c0;border-radius:8px;padding:8px;font-size:16px;flex-shrink:0;}
-.why-title{font-weight:700;font-size:13px;color:#fff;margin-bottom:2px;}
-.why-desc{font-size:12px;color:#90caf9;}
+.about-why-card{background:#0a2a5e;border-radius:16px;padding:1.5rem;margin-top:1.5rem;}
+.about-why-header{font-size:11px;color:#90caf9;margin-bottom:1rem;font-weight:600;letter-spacing:1px;}
+.awy-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:1rem;}
+.awy-row:last-child{margin-bottom:0;}
+.awy-icon{background:#1565c0;border-radius:8px;padding:8px;font-size:16px;flex-shrink:0;}
+.awy-title{font-weight:700;font-size:13px;color:#fff;margin-bottom:2px;}
+.awy-desc{font-size:12px;color:#90caf9;}
 
 /* DOCTORS */
 .doctors-grid{display:flex;flex-direction:column;gap:1.2rem;}
@@ -110,8 +129,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1a2a3a;}
 /* SERVICES */
 .services-grid{display:flex;flex-direction:column;gap:10px;}
 .svc-card{background:#fff;border-radius:12px;padding:1.2rem;border:1px solid #e3f2fd;display:flex;gap:14px;align-items:flex-start;}
-.svc-left{flex-shrink:0;}
-.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .svc-tag{display:inline-block;font-size:9px;padding:2px 7px;border-radius:8px;margin-bottom:5px;font-weight:700;letter-spacing:0.5px;}
 .tag-fetal{background:#e3f2fd;color:#1565c0;}
 .tag-msk{background:#fff3e0;color:#e65100;}
@@ -138,7 +156,6 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1a2a3a;}
 /* FAQ */
 .faq-item{border:1px solid #e3f2fd;border-radius:10px;margin-bottom:8px;overflow:hidden;}
 .faq-q{padding:14px 16px;font-weight:600;font-size:13px;color:#0a2a5e;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#f8fbff;gap:10px;}
-.faq-q:active{background:#e3f2fd;}
 .faq-a{padding:0 16px;max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.2s;font-size:13px;color:#546e7a;line-height:1.7;}
 .faq-a.open{max-height:300px;padding:12px 16px;}
 .faq-chev{transition:transform 0.2s;flex-shrink:0;font-size:18px;}
@@ -148,22 +165,19 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1a2a3a;}
 .book-section{background:#0a2a5e;min-height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;padding:2rem 1.2rem;}
 .book-inner{text-align:center;width:100%;max-width:400px;}
 .book-inner h2{color:#fff;font-size:26px;font-weight:700;margin-bottom:10px;}
-.book-inner > p{color:#90caf9;font-size:14px;margin-bottom:2rem;line-height:1.6;}
-.call-btn{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#0a2a5e;padding:18px 32px;border-radius:50px;font-size:22px;font-weight:800;text-decoration:none;letter-spacing:1px;transition:all 0.2s;width:100%;}
-.call-btn:active{background:#e3f2fd;transform:scale(0.98);}
+.book-inner>p{color:#90caf9;font-size:14px;margin-bottom:2rem;line-height:1.6;}
+.call-btn{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#0a2a5e;padding:18px 32px;border-radius:50px;font-size:22px;font-weight:800;text-decoration:none;width:100%;}
+.call-btn:active{background:#e3f2fd;}
 .book-hours{color:#64b5f6;font-size:13px;margin-top:1.5rem;line-height:2;}
 .book-address{margin-top:2rem;background:rgba(255,255,255,0.08);border-radius:12px;padding:1.2rem;font-size:13px;color:#90caf9;line-height:1.8;}
 
-/* BOTTOM NAV - mobile only */
+/* BOTTOM NAV */
 .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#0a2a5e;border-top:1px solid rgba(255,255,255,0.15);z-index:100;box-shadow:0 -2px 10px rgba(0,0,0,0.3);}
 .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;color:#90caf9;text-decoration:none;font-size:9px;font-weight:600;letter-spacing:0.3px;transition:all 0.2s;cursor:pointer;background:none;border:none;}
-.bottom-nav a.active,.bottom-nav a:active{color:#fff;background:rgba(255,255,255,0.1);}
+.bottom-nav a.active{color:#fff;background:rgba(255,255,255,0.1);}
 .bottom-nav a .bnav-icon{font-size:20px;line-height:1;}
-
-/* PAGE PADDING for bottom nav */
-.page.active{padding-bottom:60px;}
-.page#page-home.active{padding-bottom:0;}
-.page#page-book.active{padding-bottom:0;}
+.page.active{padding-bottom:62px;}
+.page#page-home.active,.page#page-book.active{padding-bottom:0;}
 
 /* LANG */
 .en{display:block;}.ta{display:none;}
@@ -171,25 +185,30 @@ body.tamil .en{display:none;}body.tamil .ta{display:block;}
 span.en{display:inline;}span.ta{display:none;}
 body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
 
-/* DESKTOP overrides */
+/* DESKTOP */
 @media(min-width:768px){
-  .nav{padding:0 2rem;}
+  .nav{padding:0 2rem;min-height:64px;}
   .nav-brand .rms{font-size:17px;}
   .nav-brand .sub{display:block;}
   .hamburger{display:none;}
   .nav-links{display:flex;}
   .mobile-menu{display:none!important;}
   .bottom-nav{display:none;}
-  .hero{flex-direction:row;align-items:center;justify-content:space-between;padding:3rem 2.5rem;min-height:calc(100vh - 64px);}
-  .hero h1{font-size:42px;}
-  .hero-badge{font-size:10px;}
-  .hero-desc{font-size:14px;}
-  .hero-btns{flex-direction:row;width:auto;}
-  .btn-primary,.btn-outline{width:auto;}
-  .hero-cards{display:flex;flex-direction:column;gap:14px;margin-top:0;width:210px;flex-shrink:0;}
-  .hero-card{text-align:left;}
-  .inner-page{padding:2.5rem 2rem;max-width:960px;margin:0 auto;}
   .page.active{padding-bottom:0;}
+  .hero{padding:4rem 2.5rem 0;}
+  .hero::after{height:80px;}
+  .hero-inner{display:grid;grid-template-columns:1fr 340px;gap:3rem;align-items:end;max-width:960px;margin:0 auto;}
+  .hero h1{font-size:42px;}
+  .hero-btns{flex-direction:row;}
+  .btn-call,.btn-ghost{width:auto;}
+  .hero-stats{max-width:960px;margin:0 auto 4rem;}
+  .why-section{padding:3rem 2rem;}
+  .why-section .section-title{font-size:28px;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .quick-services{padding:0 2rem 3rem;max-width:960px;margin:0 auto;}
+  .qs-grid{grid-template-columns:repeat(5,1fr);}
+  .cta-strip{max-width:960px;margin:0 auto 3rem;}
+  .inner-page{padding:2.5rem 2rem;max-width:960px;margin:0 auto;}
   .about-stats{grid-template-columns:repeat(4,1fr);}
   .doctors-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
   .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
@@ -225,43 +244,141 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="#" onclick="showPage('about');return false;" id="mnav-about">🏥 <span class="en">About Us</span><span class="ta">எங்களைப் பற்றி</span></a>
   <a href="#" onclick="showPage('doctors');return false;" id="mnav-doctors">👨‍⚕️ <span class="en">Our Doctors</span><span class="ta">எங்கள் மருத்துவர்கள்</span></a>
   <a href="#" onclick="showPage('services');return false;" id="mnav-services">🔬 <span class="en">Services</span><span class="ta">சேவைகள்</span></a>
-  <a href="#" onclick="showPage('timings');return false;" id="mnav-timings">🕘 <span class="en">Timings & Contact</span><span class="ta">நேரம் மற்றும் தொடர்பு</span></a>
+  <a href="#" onclick="showPage('timings');return false;" id="mnav-timings">🕘 <span class="en">Timings &amp; Contact</span><span class="ta">நேரம் மற்றும் தொடர்பு</span></a>
   <a href="#" onclick="showPage('faq');return false;" id="mnav-faq">❓ FAQ</a>
   <a href="#" onclick="showPage('book');return false;" id="mnav-book">📞 <span class="en">Book Appointment</span><span class="ta">சந்திப்பு முன்பதிவு</span></a>
 </div>
 
-<!-- HOME -->
+<!-- ===== HOME PAGE ===== -->
 <div class="page active" id="page-home">
+
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge"><span class="en">A New Chapter from Sri Mahalakshmi Scans · Since 1992</span><span class="ta">ஸ்ரீ மகாலட்சுமி ஸ்கேன்ஸ் · 1992 முதல்</span></div>
-      <h1><span class="en">RMS <span>Fetal</span> Diagnostics</span><span class="ta">ஆர்எம்எஸ் <span>கரு</span> நோயறிதல்</span></h1>
-      <p class="hero-sub"><span class="en">Advanced Fetal · MSK · Gynaecology — Chidambaram</span><span class="ta">அதிநவீன கரு · தசை எலும்பு · மகப்பேறு — சிதம்பரம்</span></p>
-      <p class="hero-desc"><span class="en">Second Generation Radiologists — Fetal Radiology, Genetics &amp; MSK Imaging</span><span class="ta">இரண்டாம் தலைமுறை ரேடியாலஜிஸ்டுகள் — கரு மற்றும் தசை எலும்பு நிபுணர்கள்</span></p>
-      <div class="hero-since">⭐ <span class="en">Trusted 30+ Years · 82203 56780</span><span class="ta">30+ ஆண்டுகள் நம்பகமான</span></div>
-      <div class="hero-btns">
-        <a href="tel:8220356780" class="btn-primary">📞 <span class="en">Call Us Now</span><span class="ta">இப்போது அழைக்கவும்</span></a>
-        <button class="btn-outline" onclick="showPage('services')"><span class="en">Our Services</span><span class="ta">எங்கள் சேவைகள்</span></button>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="en">New Chapter · Sri Mahalakshmi Scans · Since 1992</span><span class="ta">ஸ்ரீ மகாலட்சுமி ஸ்கேன்ஸ் · 1992 முதல்</span></div>
+        <h1><span class="en">RMS <span>Fetal</span> Diagnostics</span><span class="ta">ஆர்எம்எஸ் <span>கரு</span> நோயறிதல்</span></h1>
+        <p class="hero-sub"><span class="en">Advanced Fetal · MSK · Gynaecology Imaging — Chidambaram</span><span class="ta">அதிநவீன கரு · தசை எலும்பு · மகப்பேறு — சிதம்பரம்</span></p>
+        <p class="hero-desc"><span class="en">Second Generation Radiologists specialising in Fetal Radiology, Genetics &amp; Musculoskeletal Imaging</span><span class="ta">கரு ரேடியாலஜி, மரபியல் மற்றும் தசை எலும்பு இமேஜிங்கில் நிபுணத்துவம் பெற்ற இரண்டாம் தலைமுறை ரேடியாலஜிஸ்டுகள்</span></p>
+        <div class="hero-btns">
+          <a href="tel:8220356780" class="btn-call">📞 <span class="en">Call Us Now</span><span class="ta">இப்போது அழைக்கவும்</span></a>
+          <button class="btn-ghost" onclick="showPage('services')"><span class="en">Our Services</span><span class="ta">எங்கள் சேவைகள்</span></button>
+        </div>
       </div>
+      <!-- hero image area - desktop only shows this -->
+      <div style="display:none;" class="hero-img-area"></div>
     </div>
-    <div class="hero-cards">
-      <div class="hero-card"><div class="icon">👶</div><h4><span class="en">Fetal Radiology</span><span class="ta">கரு ரேடியாலஜி</span></h4><p>3D/4D · TIFFA · Echo</p></div>
-      <div class="hero-card"><div class="icon">🦴</div><h4><span class="en">MSK Imaging</span><span class="ta">தசை எலும்பு</span></h4><p>Knee · Shoulder · Wrist</p></div>
-      <div class="hero-card"><div class="icon">🎓</div><h4><span class="en">2nd Gen Specialists</span><span class="ta">2ம் தலைமுறை நிபுணர்கள்</span></h4><p>Ph.D + Dual Fellowship</p></div>
+    <!-- STATS -->
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="snum">30+</div><div class="slbl"><span class="en">Years Trust</span><span class="ta">ஆண்டுகள்</span></div></div>
+      <div class="hero-stat"><div class="snum">2</div><div class="slbl"><span class="en">Specialists</span><span class="ta">நிபுணர்கள்</span></div></div>
+      <div class="hero-stat"><div class="snum">3D/4D</div><div class="slbl"><span class="en">HD Scanning</span><span class="ta">HD ஸ்கேன்</span></div></div>
     </div>
   </section>
+
+  <!-- TICKER -->
   <div class="ticker"><div class="ticker-inner">
     <span>3D/4D Anomaly Scan</span><span>Fetal Echo</span><span>NT Scan</span><span>MSK Joint USG</span><span>Early TIFFA</span><span>Fetal Neurosonogram</span><span>Amniocentesis</span><span>CVS</span><span>Follicular Study</span><span>Growth &amp; Doppler</span>
     <span>3D/4D Anomaly Scan</span><span>Fetal Echo</span><span>NT Scan</span><span>MSK Joint USG</span><span>Early TIFFA</span><span>Fetal Neurosonogram</span><span>Amniocentesis</span><span>CVS</span><span>Follicular Study</span><span>Growth &amp; Doppler</span>
   </div></div>
-</div>
 
-<!-- ABOUT -->
+  <!-- WHY CHOOSE RMS -->
+  <div class="why-section">
+    <span class="section-label"><span class="en">Why Choose Us</span><span class="ta">ஏன் நம்மை தேர்வு செய்யணும்</span></span>
+    <div class="section-title"><span class="en">Why Choose RMS?</span><span class="ta">RMS ஐ ஏன் தேர்வு செய்யணும்?</span></div>
+    <p class="section-sub"><span class="en">Chidambaram's most trusted diagnostic centre</span><span class="ta">சிதம்பரத்தின் மிகவும் நம்பகமான நோயறிதல் மையம்</span></p>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <div class="why-item-icon" style="background:#e3f2fd;">🔬</div>
+        <div class="why-item-body">
+          <span class="why-item-badge" style="background:#e3f2fd;color:#1565c0;"><span class="en">UNIQUE</span><span class="ta">தனித்துவம்</span></span>
+          <h4><span class="en">Only Dual-Speciality Centre</span><span class="ta">இரட்டை சிறப்பு மையம்</span></h4>
+          <p class="en">The only centre in Chidambaram offering both Fetal Radiology and Musculoskeletal Imaging under one roof.</p>
+          <p class="ta">கரு ரேடியாலஜி மற்றும் தசை எலும்பு இமேஜிங் இரண்டையும் வழங்கும் சிதம்பரத்தில் ஒரே மையம்.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-item-icon" style="background:#fff3e0;">👨‍⚕️</div>
+        <div class="why-item-body">
+          <span class="why-item-badge" style="background:#fff3e0;color:#e65100;"><span class="en">LEGACY</span><span class="ta">பரம்பரை</span></span>
+          <h4><span class="en">2nd Generation Radiologists</span><span class="ta">இரண்டாம் தலைமுறை ரேடியாலஜிஸ்டுகள்</span></h4>
+          <p class="en">Father-Son specialist team — Dr. Adaikappan (Ph.D, 30+ years) and Dr. Muthiah (MD, Dual Fellowship).</p>
+          <p class="ta">தந்தை-மகன் நிபுண குழு — Dr. அடைக்கப்பன் (Ph.D, 30+ ஆண்டுகள்) மற்றும் Dr. மூத்தையா (MD, இரட்டை ஃபெலோஷிப்).</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-item-icon" style="background:#e8f5e9;">📡</div>
+        <div class="why-item-body">
+          <span class="why-item-badge" style="background:#e8f5e9;color:#2e7d32;"><span class="en">TECHNOLOGY</span><span class="ta">தொழில்நுட்பம்</span></span>
+          <h4><span class="en">Advanced 3D/4D HD Scanning</span><span class="ta">மேம்பட்ட 3D/4D HD ஸ்கேனிங்</span></h4>
+          <p class="en">See your baby's face before birth with our high-definition 3D/4D ultrasound technology.</p>
+          <p class="ta">பிறப்பதற்கு முன்பே எங்கள் HD 3D/4D தொழில்நுட்பத்தில் குழந்தையின் முகம் காணுங்கள்.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-item-icon" style="background:#f3e5f5;">🧬</div>
+        <div class="why-item-body">
+          <span class="why-item-badge" style="background:#f3e5f5;color:#7b1fa2;"><span class="en">EXPERTISE</span><span class="ta">நிபுணத்துவம்</span></span>
+          <h4><span class="en">Fetal Genetics Specialist</span><span class="ta">கரு மரபியல் நிபுணர்</span></h4>
+          <p class="en">Fellowship in Fetal Radiology &amp; Genetics — expert guidance for high-risk pregnancies and genetic screening.</p>
+          <p class="ta">கரு ரேடியாலஜி மற்றும் மரபியலில் ஃபெலோஷிப் — அதிக ஆபத்துள்ள கர்ப்பங்களுக்கு நிபுண வழிகாட்டுதல்.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-item-icon" style="background:#fff8e1;">🏆</div>
+        <div class="why-item-body">
+          <span class="why-item-badge" style="background:#fff8e1;color:#f57f17;"><span class="en">TRUST</span><span class="ta">நம்பிக்கை</span></span>
+          <h4><span class="en">30+ Years of Trust</span><span class="ta">30+ ஆண்டுகள் நம்பகமான</span></h4>
+          <p class="en">Sri Mahalakshmi Scan Services has served Chidambaram families since 1992 — a name you can trust.</p>
+          <p class="ta">1992 முதல் சிதம்பரம் குடும்பங்களுக்கு சேவை செய்யும் ஸ்ரீ மகாலட்சுமி ஸ்கேன் சர்வீசஸ்.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-item-icon" style="background:#e8f5e9;">✅</div>
+        <div class="why-item-body">
+          <span class="why-item-badge" style="background:#e8f5e9;color:#2e7d32;"><span class="en">SAFETY</span><span class="ta">பாதுகாப்பு</span></span>
+          <h4><span class="en">Strict Sterilisation Standards</span><span class="ta">தரமான கிருமிநாசினி</span></h4>
+          <p class="en">We strictly follow international sterilisation protocols — your safety is our priority.</p>
+          <p class="ta">சர்வதேச கிருமிநாசினி நெறிமுறைகளை கடைப்பிடிக்கிறோம் — உங்கள் பாதுகாப்பு எங்கள் முன்னுரிமை.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- QUICK SERVICES -->
+  <div class="quick-services">
+    <div class="qs-title"><span class="en">Our Key Services</span><span class="ta">முக்கிய சேவைகள்</span></div>
+    <div class="qs-grid">
+      <div class="qs-item" onclick="showPage('services')"><div class="qi">👶</div><span><span class="en">NT Scan</span><span class="ta">NT ஸ்கேன்</span></span></div>
+      <div class="qs-item" onclick="showPage('services')"><div class="qi">📡</div><span><span class="en">TIFFA Scan</span><span class="ta">TIFFA ஸ்கேன்</span></span></div>
+      <div class="qs-item" onclick="showPage('services')"><div class="qi">❤️</div><span><span class="en">Fetal Echo</span><span class="ta">கரு எக்கோ</span></span></div>
+      <div class="qs-item" onclick="showPage('services')"><div class="qi">🦵</div><span><span class="en">MSK USG</span><span class="ta">MSK ஸ்கேன்</span></span></div>
+      <div class="qs-item" onclick="showPage('services')"><div class="qi">🔬</div><span><span class="en">All Services</span><span class="ta">அனைத்தும்</span></span></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h3><span class="en">Ready to Book Your Scan?</span><span class="ta">ஸ்கேன் முன்பதிவு செய்யவா?</span></h3>
+    <p><span class="en">Call us now — we're here to help Mon–Sat 9am–9pm, Sun 10am–1pm</span><span class="ta">இப்போது அழைக்கவும் — திங்கள்–சனி காலை 9 – இரவு 9, ஞாயிறு காலை 10 – மதியம் 1</span></p>
+    <a href="tel:8220356780">📞 82203 56780</a>
+  </div>
+
+</div><!-- end home page -->
+
+<!-- ABOUT PAGE -->
 <div class="page" id="page-about">
   <div class="page-header">
     <span class="label"><span class="en">Who We Are</span><span class="ta">நாங்கள் யார்</span></span>
@@ -279,17 +396,17 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
       <p class="en">RMS Fetal Diagnostics is a new chapter from Sri Mahalakshmi Scan Services, trusted since 1992. We are the only centre in the Chidambaram region combining specialist Fetal Radiology with Fellowship-trained Musculoskeletal Imaging.</p>
       <p class="ta">RMS கரு நோயறிதல், 1992 முதல் நம்பகமான ஸ்ரீ மகாலட்சுமி ஸ்கேன் சர்வீசஸ் — இன் புதிய அத்தியாயம். கரு ரேடியாலஜி மற்றும் தசை எலும்பு இமேஜிங் இரண்டையும் வழங்கும் சிதம்பரம் பகுதியில் ஒரே மையம்.</p>
     </div>
-    <div class="why-card">
-      <div class="why-header"><span class="en">WHY CHOOSE RMS?</span><span class="ta">RMS ஐ ஏன் தேர்வு செய்யணும்?</span></div>
-      <div class="why-row"><div class="why-icon">🔬</div><div><div class="why-title"><span class="en">Only Dual-Speciality Centre</span><span class="ta">இரட்டை சிறப்பு மையம்</span></div><div class="why-desc"><span class="en">Fetal + MSK — unique in Chidambaram</span><span class="ta">கரு + தசை எலும்பு — சிதம்பரத்தில் தனித்துவம்</span></div></div></div>
-      <div class="why-row"><div class="why-icon">👨‍⚕️</div><div><div class="why-title"><span class="en">2nd Generation Radiologists</span><span class="ta">இரண்டாம் தலைமுறை</span></div><div class="why-desc"><span class="en">Father-Son · Ph.D + Dual Fellowship</span><span class="ta">தந்தை-மகன் குழு · Ph.D + இரட்டை ஃபெலோஷிப்</span></div></div></div>
-      <div class="why-row"><div class="why-icon">📡</div><div><div class="why-title"><span class="en">Advanced 3D/4D HD</span><span class="ta">மேம்பட்ட 3D/4D HD</span></div><div class="why-desc"><span class="en">See your baby's face before birth</span><span class="ta">பிறப்பதற்கு முன்பே குழந்தை முகம் காணுங்கள்</span></div></div></div>
-      <div class="why-row"><div class="why-icon">✅</div><div><div class="why-title"><span class="en">Standard Sterilisation</span><span class="ta">தரமான கிருமிநாசினி</span></div><div class="why-desc"><span class="en">International safety standards strictly followed</span><span class="ta">சர்வதேச தரங்கள் கடைப்பிடிக்கப்படுகின்றன</span></div></div></div>
+    <div class="about-why-card">
+      <div class="about-why-header"><span class="en">WHY CHOOSE RMS?</span><span class="ta">RMS ஐ ஏன் தேர்வு செய்யணும்?</span></div>
+      <div class="awy-row"><div class="awy-icon">🔬</div><div><div class="awy-title"><span class="en">Only Dual-Speciality Centre</span><span class="ta">இரட்டை சிறப்பு மையம்</span></div><div class="awy-desc"><span class="en">Fetal + MSK — unique in Chidambaram</span><span class="ta">கரு + தசை எலும்பு — சிதம்பரத்தில் தனித்துவம்</span></div></div></div>
+      <div class="awy-row"><div class="awy-icon">👨‍⚕️</div><div><div class="awy-title"><span class="en">2nd Generation Radiologists</span><span class="ta">இரண்டாம் தலைமுறை</span></div><div class="awy-desc"><span class="en">Father-Son · Ph.D + Dual Fellowship</span><span class="ta">தந்தை-மகன் குழு · Ph.D + இரட்டை ஃபெலோஷிப்</span></div></div></div>
+      <div class="awy-row"><div class="awy-icon">📡</div><div><div class="awy-title"><span class="en">Advanced 3D/4D HD</span><span class="ta">மேம்பட்ட 3D/4D HD</span></div><div class="awy-desc"><span class="en">See your baby's face before birth</span><span class="ta">பிறப்பதற்கு முன்பே குழந்தை முகம் காணுங்கள்</span></div></div></div>
+      <div class="awy-row"><div class="awy-icon">✅</div><div><div class="awy-title"><span class="en">Standard Sterilisation</span><span class="ta">தரமான கிருமிநாசினி</span></div><div class="awy-desc"><span class="en">International safety standards strictly followed</span><span class="ta">சர்வதேச தரங்கள் கடைப்பிடிக்கப்படுகின்றன</span></div></div></div>
     </div>
   </div>
 </div>
 
-<!-- DOCTORS -->
+<!-- DOCTORS PAGE -->
 <div class="page" id="page-doctors">
   <div class="page-header">
     <span class="label"><span class="en">Our Team</span><span class="ta">எங்கள் குழு</span></span>
@@ -316,7 +433,7 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
   </div>
 </div>
 
-<!-- SERVICES -->
+<!-- SERVICES PAGE -->
 <div class="page" id="page-services">
   <div class="page-header">
     <span class="label"><span class="en">What We Offer</span><span class="ta">எங்கள் சேவைகள்</span></span>
@@ -325,20 +442,20 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
   </div>
   <div class="inner-page">
     <div class="services-grid">
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e3f2fd">👶</div></div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">NT Scan &amp; Genetic Sonogram</span><span class="ta">NT ஸ்கேன் மற்றும் மரபணு சோனோகிராம்</span></h4><p class="en">Down syndrome &amp; chromosomal screening with risk calculation.</p><p class="ta">டவுன் சிண்ட்ரோம் மற்றும் குரோமோசோம் ஸ்கேனிங்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e3f2fd">📡</div></div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">3D/4D TIFFA Anomaly Scan</span><span class="ta">3D/4D TIFFA அசாதாரண ஸ்கேன்</span></h4><p class="en">HD anomaly scan. Early TIFFA for high-risk patients (16–19 weeks).</p><p class="ta">HD TIFFA ஸ்கேன். அதிக ஆபத்தானவர்களுக்கு 16–19 வாரங்கள்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e3f2fd">❤️</div></div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">Fetal Echo — Baby Heart Scan</span><span class="ta">கரு எக்கோ — குழந்தை இதய ஸ்கேன்</span></h4><p class="en">Detects congenital heart defects. Structure &amp; function assessment.</p><p class="ta">பிறவி இதய குறைபாடுகளை கண்டறியும் விரிவான ஸ்கேன்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e3f2fd">🧠</div></div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">Fetal Neurosonogram</span><span class="ta">கரு நரம்பியல் சோனோகிராம்</span></h4><p class="en">Advanced brain scan for structural abnormalities in the fetus.</p><p class="ta">கரு மூளை அசாதாரணங்களை கண்டறிய மேம்பட்ட ஸ்கேன்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e3f2fd">📈</div></div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">Growth Scan &amp; Doppler</span><span class="ta">வளர்ச்சி ஸ்கேன் மற்றும் டாப்ளர்</span></h4><p class="en">Fetal growth assessment and blood flow monitoring.</p><p class="ta">குழந்தையின் வளர்ச்சி மதிப்பீடு மற்றும் இரத்த ஓட்டம்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e8f5e9">💉</div></div><div><span class="svc-tag tag-fetal">PROCEDURE</span><h4><span class="en">Amniocentesis &amp; CVS</span><span class="ta">அம்னியோசெண்டிசிஸ் மற்றும் CVS</span></h4><p class="en">Prenatal procedures for genetic testing.</p><p class="ta">மரபணு பரிசோதனைக்கான நடைமுறைகள்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#fff3e0">🦵</div></div><div><span class="svc-tag tag-msk">MSK</span><h4><span class="en">MSK Joint Ultrasound</span><span class="ta">மூட்டு அல்ட்ராசவுண்ட்</span></h4><p class="en">Knee, Shoulder, Wrist, Elbow &amp; Ankle. Fellowship-trained specialist.</p><p class="ta">முழங்கால், தோள், மணிக்கட்டு, முழங்கை, கணுக்கால் ஸ்கேன்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#f3e5f5">🌸</div></div><div><span class="svc-tag tag-gyn">GYNAECOLOGY</span><h4><span class="en">Follicular Study</span><span class="ta">ஃபோலிகுலர் ஆய்வு</span></h4><p class="en">Follicular monitoring with blood flow. 3D/4D Pelvic imaging.</p><p class="ta">ஃபோலிகுலர் கண்காணிப்பு மற்றும் 3D/4D இடுப்பு இமேஜிங்.</p></div></div>
-      <div class="svc-card"><div class="svc-left"><div class="svc-icon" style="background:#e8f5e9">🏥</div></div><div><span class="svc-tag tag-abd">ABDOMEN</span><h4><span class="en">Abdominal &amp; KUB Scan</span><span class="ta">வயிறு மற்றும் KUB ஸ்கேன்</span></h4><p class="en">Whole Abdomen, KUB, Hernia and Pelvis ultrasound.</p><p class="ta">முழு வயிறு, KUB, ஹெர்னியா மற்றும் இடுப்பு ஸ்கேன்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e3f2fd">👶</div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">NT Scan &amp; Genetic Sonogram</span><span class="ta">NT ஸ்கேன் மற்றும் மரபணு சோனோகிராம்</span></h4><p class="en">Down syndrome &amp; chromosomal screening with risk calculation.</p><p class="ta">டவுன் சிண்ட்ரோம் மற்றும் குரோமோசோம் ஸ்கேனிங்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e3f2fd">📡</div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">3D/4D TIFFA Anomaly Scan</span><span class="ta">3D/4D TIFFA அசாதாரண ஸ்கேன்</span></h4><p class="en">HD anomaly scan. Early TIFFA for high-risk patients (16–19 weeks).</p><p class="ta">HD TIFFA ஸ்கேன். அதிக ஆபத்தானவர்களுக்கு 16–19 வாரங்கள்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e3f2fd">❤️</div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">Fetal Echo — Baby Heart Scan</span><span class="ta">கரு எக்கோ — குழந்தை இதய ஸ்கேன்</span></h4><p class="en">Detects congenital heart defects. Structure &amp; function assessment.</p><p class="ta">பிறவி இதய குறைபாடுகளை கண்டறியும் விரிவான ஸ்கேன்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e3f2fd">🧠</div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">Fetal Neurosonogram</span><span class="ta">கரு நரம்பியல் சோனோகிராம்</span></h4><p class="en">Advanced brain scan for structural abnormalities in the fetus.</p><p class="ta">கரு மூளை அசாதாரணங்களை கண்டறிய மேம்பட்ட ஸ்கேன்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e3f2fd">📈</div><div><span class="svc-tag tag-fetal">FETAL</span><h4><span class="en">Growth Scan &amp; Doppler</span><span class="ta">வளர்ச்சி ஸ்கேன் மற்றும் டாப்ளர்</span></h4><p class="en">Fetal growth assessment and blood flow monitoring.</p><p class="ta">குழந்தையின் வளர்ச்சி மதிப்பீடு மற்றும் இரத்த ஓட்டம்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e8f5e9">💉</div><div><span class="svc-tag tag-fetal">PROCEDURE</span><h4><span class="en">Amniocentesis &amp; CVS</span><span class="ta">அம்னியோசெண்டிசிஸ் மற்றும் CVS</span></h4><p class="en">Prenatal procedures for genetic testing.</p><p class="ta">மரபணு பரிசோதனைக்கான நடைமுறைகள்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#fff3e0">🦵</div><div><span class="svc-tag tag-msk">MSK</span><h4><span class="en">MSK Joint Ultrasound</span><span class="ta">மூட்டு அல்ட்ராசவுண்ட்</span></h4><p class="en">Knee, Shoulder, Wrist, Elbow &amp; Ankle. Fellowship-trained specialist.</p><p class="ta">முழங்கால், தோள், மணிக்கட்டு, முழங்கை, கணுக்கால் ஸ்கேன்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#f3e5f5">🌸</div><div><span class="svc-tag tag-gyn">GYNAECOLOGY</span><h4><span class="en">Follicular Study</span><span class="ta">ஃபோலிகுலர் ஆய்வு</span></h4><p class="en">Follicular monitoring with blood flow. 3D/4D Pelvic imaging.</p><p class="ta">ஃபோலிகுலர் கண்காணிப்பு மற்றும் 3D/4D இடுப்பு இமேஜிங்.</p></div></div>
+      <div class="svc-card"><div class="svc-icon" style="background:#e8f5e9">🏥</div><div><span class="svc-tag tag-abd">ABDOMEN</span><h4><span class="en">Abdominal &amp; KUB Scan</span><span class="ta">வயிறு மற்றும் KUB ஸ்கேன்</span></h4><p class="en">Whole Abdomen, KUB, Hernia and Pelvis ultrasound.</p><p class="ta">முழு வயிறு, KUB, ஹெர்னியா மற்றும் இடுப்பு ஸ்கேன்.</p></div></div>
     </div>
   </div>
 </div>
 
-<!-- TIMINGS -->
+<!-- TIMINGS PAGE -->
 <div class="page" id="page-timings">
   <div class="page-header">
     <span class="label"><span class="en">Visit Us</span><span class="ta">எங்களை சந்தியுங்கள்</span></span>
@@ -361,7 +478,7 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
   </div>
 </div>
 
-<!-- FAQ -->
+<!-- FAQ PAGE -->
 <div class="page" id="page-faq">
   <div class="page-header">
     <span class="label">FAQ</span>
@@ -370,13 +487,13 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
   <div class="inner-page">
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span><span class="en">What makes RMS different?</span><span class="ta">RMS ஐ வேறுபடுத்துவது என்ன?</span></span><span class="faq-chev">▾</span></div><div class="faq-a"><span class="en">Only centre in Chidambaram with both Fetal Radiology and MSK Imaging. Father-son team with Ph.D and dual Fellowship — 30+ years of legacy.</span><span class="ta">கரு மற்றும் தசை எலும்பு இமேஜிங் இரண்டையும் வழங்கும் சிதம்பரத்தில் ஒரே மையம். 30+ ஆண்டுகள் பரம்பரை.</span></div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span><span class="en">When to get an NT Scan?</span><span class="ta">NT ஸ்கேன் எப்போது?</span></span><span class="faq-chev">▾</span></div><div class="faq-a"><span class="en">Ideally between 11 to 13 weeks + 6 days of pregnancy. It screens for Down syndrome and chromosomal abnormalities.</span><span class="ta">கர்ப்பத்தின் 11 முதல் 13 வாரங்கள் + 6 நாட்களுக்கிடையில் செய்வது சிறந்தது.</span></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span><span class="en">What is Early TIFFA?</span><span class="ta">ஆரம்ப TIFFA என்றால் என்ன?</span></span><span class="faq-chev">▾</span></div><div class="faq-a"><span class="en">Anomaly scan done between 16–19 weeks for high-risk patients, allowing earlier detection and intervention if needed.</span><span class="ta">அதிக ஆபத்துள்ள நோயாளிகளுக்கு 16–19 வாரங்களில் செய்யப்படும் ஸ்கேன்.</span></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span><span class="en">What is Early TIFFA?</span><span class="ta">ஆரம்ப TIFFA என்றால் என்ன?</span></span><span class="faq-chev">▾</span></div><div class="faq-a"><span class="en">Anomaly scan done between 16–19 weeks for high-risk patients, allowing earlier detection and intervention.</span><span class="ta">அதிக ஆபத்துள்ள நோயாளிகளுக்கு 16–19 வாரங்களில் செய்யப்படும் ஸ்கேன்.</span></div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span><span class="en">Do you offer MSK scans?</span><span class="ta">தசை எலும்பு ஸ்கேன் உண்டா?</span></span><span class="faq-chev">▾</span></div><div class="faq-a"><span class="en">Yes! Dr. Muthiah holds a Fellowship in MSK Imaging. We offer Knee, Shoulder, Wrist, Elbow and Ankle ultrasound.</span><span class="ta">ஆம். முழங்கால், தோள், மணிக்கட்டு, முழங்கை மற்றும் கணுக்கால் ஸ்கேன் வழங்குகிறோம்.</span></div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span><span class="en">Can I see baby's face in 3D/4D?</span><span class="ta">3D/4D ல் குழந்தை முகம் பார்க்கலாமா?</span></span><span class="faq-chev">▾</span></div><div class="faq-a"><span class="en">Yes! Our 3D/4D HD technology lets parents see baby's face in real-time. Best window is 28–32 weeks.</span><span class="ta">ஆம். 28–32 வாரங்களில் 3D/4D HD இமேஜிங்கில் குழந்தையின் முகம் தெளிவாக காணலாம்.</span></div></div>
   </div>
 </div>
 
-<!-- BOOK -->
+<!-- BOOK PAGE -->
 <div class="page" id="page-book">
   <div class="book-section">
     <div class="book-inner">
@@ -384,18 +501,13 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
       <h2><span class="en">Book an Appointment</span><span class="ta">சந்திப்பு முன்பதிவு</span></h2>
       <p><span class="en">Call us directly to schedule your scan. We're happy to help.</span><span class="ta">ஸ்கேன் நேரம் பதிவு செய்ய நேரடியாக அழைக்கவும்.</span></p>
       <a href="tel:8220356780" class="call-btn">📞 82203 56780</a>
-      <div class="book-hours">
-        <span class="en">Mon – Sat: 9:00 AM – 1:30 PM &amp; 2:30 PM – 9:00 PM<br>Sunday: 10:00 AM – 1:00 PM</span>
-        <span class="ta">திங்கள் – சனி: காலை 9:00 – மதியம் 1:30 மற்றும் மாலை 2:30 – இரவு 9:00<br>ஞாயிறு: காலை 10:00 – மதியம் 1:00</span>
-      </div>
-      <div class="book-address">
-        📍 <span class="en">53, North Car Street, (MI Showroom Opposite), Chidambaram – 608 001</span><span class="ta">53, நோர்த் கார் ஸ்ட்ரீட், (MI ஷோரூம் எதிரில்), சிதம்பரம் – 608 001</span>
-      </div>
+      <div class="book-hours"><span class="en">Mon – Sat: 9:00 AM – 1:30 PM &amp; 2:30 PM – 9:00 PM<br>Sunday: 10:00 AM – 1:00 PM</span><span class="ta">திங்கள் – சனி: காலை 9:00 – மதியம் 1:30 மற்றும் மாலை 2:30 – இரவு 9:00<br>ஞாயிறு: காலை 10:00 – மதியம் 1:00</span></div>
+      <div class="book-address">📍 <span class="en">53, North Car Street, (MI Showroom Opposite), Chidambaram – 608 001</span><span class="ta">53, நோர்த் கார் ஸ்ட்ரீட், (MI ஷோரூம் எதிரில்), சிதம்பரம் – 608 001</span></div>
     </div>
   </div>
 </div>
 
-<!-- BOTTOM NAV (mobile) -->
+<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <a onclick="showPage('home')" id="bnav-home"><span class="bnav-icon">🏠</span><span class="en">Home</span><span class="ta">முகப்பு</span></a>
   <a onclick="showPage('services')" id="bnav-services"><span class="bnav-icon">🔬</span><span class="en">Services</span><span class="ta">சேவை</span></a>
@@ -405,49 +517,37 @@ body.tamil span.en{display:none;}body.tamil span.ta{display:inline;}
 </nav>
 
 <script>
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-links a, .bottom-nav a').forEach(a => a.classList.remove('active'));
-  document.querySelectorAll('.mobile-menu a').forEach(a => a.classList.remove('active'));
-  document.getElementById('page-' + name).classList.add('active');
-  ['nav-','bnav-','mnav-'].forEach(prefix => {
-    const el = document.getElementById(prefix + name);
-    if (el) el.classList.add('active');
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a,.bottom-nav a').forEach(a=>a.classList.remove('active'));
+  document.querySelectorAll('.mobile-menu a').forEach(a=>a.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  ['nav-','bnav-','mnav-'].forEach(prefix=>{
+    const el=document.getElementById(prefix+name);
+    if(el) el.classList.add('active');
   });
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
   closeMenu();
   return false;
 }
-function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const btn = document.getElementById('hamburger');
-  menu.classList.toggle('open');
-  btn.classList.toggle('open');
+function toggleMenu(){
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
 }
-function closeMenu() {
+function closeMenu(){
   document.getElementById('mobile-menu').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
 }
-function setLang(lang) {
-  if (lang === 'ta') {
-    document.body.classList.add('tamil');
-    document.getElementById('btn-ta').classList.add('active');
-    document.getElementById('btn-en').classList.remove('active');
-  } else {
-    document.body.classList.remove('tamil');
-    document.getElementById('btn-en').classList.add('active');
-    document.getElementById('btn-ta').classList.remove('active');
-  }
+function setLang(lang){
+  if(lang==='ta'){document.body.classList.add('tamil');document.getElementById('btn-ta').classList.add('active');document.getElementById('btn-en').classList.remove('active');}
+  else{document.body.classList.remove('tamil');document.getElementById('btn-en').classList.add('active');document.getElementById('btn-ta').classList.remove('active');}
 }
-function toggleFaq(el) {
-  const ans = el.nextElementSibling;
-  const chev = el.querySelector('.faq-chev');
-  const isOpen = ans.classList.contains('open');
-  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-  document.querySelectorAll('.faq-chev').forEach(c => c.classList.remove('open'));
-  if (!isOpen) { ans.classList.add('open'); chev.classList.add('open'); }
+function toggleFaq(el){
+  const ans=el.nextElementSibling,chev=el.querySelector('.faq-chev'),isOpen=ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.faq-chev').forEach(c=>c.classList.remove('open'));
+  if(!isOpen){ans.classList.add('open');chev.classList.add('open');}
 }
-// Set home active on load
 document.getElementById('bnav-home').classList.add('active');
 </script>
 </body>
